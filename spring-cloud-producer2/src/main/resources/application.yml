@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-producer
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.153.65:8000/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
+
+
+
+
+
+

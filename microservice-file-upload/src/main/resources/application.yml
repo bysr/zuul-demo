@@ -1,0 +1,30 @@
+server:
+  port: 8050
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.153.65:8000/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: microservice-file-upload
+
+  http:
+    multipart:
+      max-file-size: 2000Mb
+      max-request-size: 2500Mb
+      location: /
+  servlet:
+    multipart:
+      enabled: true
+
+
+
+
+info:
+  app.name: microcloud-provider-upload
+  company.name: com.alen
+  build.artifactId: $project.artifactId$
+  build.version: $project.verson$

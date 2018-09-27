@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-cloud-producer
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.153.65:8000/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
+
+
+#actuator/info 信息设置
+info:
+  app:
+    version: v1.2.1
+    name: abc
+  hello:
+    wang: ni
+
+
+

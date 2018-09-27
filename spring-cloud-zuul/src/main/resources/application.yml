@@ -1,0 +1,31 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: spring-cloud-zuul
+
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://10.10.153.65:8000/eureka/
+
+  instance:
+    prefer-ip-address: true
+
+
+
+
+zuul:
+  ignored-services: '*'
+  routes:
+    spring-cloud-producer: /producer/**
+    microservice-file-upload: /file/**
+
+  retryable: true
+ribbon:
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 0
