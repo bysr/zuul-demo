@@ -64,6 +64,7 @@ zuul:
 ```
 3. 启动类添加@EnableZuulProxy，用于支持网关路由
  
+ 
 ```
 @SpringBootApplication
 @EnableZuulProxy
